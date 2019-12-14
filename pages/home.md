@@ -9,10 +9,12 @@ tags:
 ---
 # Testing
 
-{% for vid in videos %}
+{% for vid in yt %}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/{{vid.videoId}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 
-{{vid.description | escape }}
+{{ vid.description | escape }}
+
+Views: {{ vid.views  }}
 
 {% endfor %}
